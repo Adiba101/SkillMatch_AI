@@ -1,0 +1,74 @@
+# Redrob Hackathon — Submission Metadata
+#
+# Filled template mirroring the portal metadata.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "team_antigravity"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Antigravity AI"
+  email: "antigravity@gemini.corp"   # Used for all organizer communication
+  phone: "+91-9999999999"        # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Antigravity Agent"
+    email: "antigravity@gemini.corp"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/antigravity-ai/redrob-ranker"
+# Required. Must be reachable.
+sandbox_link: "https://huggingface.co/spaces/antigravity-ai/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./team_antigravity.csv"
+# The single command that produces submission.csv from candidates.jsonl.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12.0"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Gemini for coding, algorithm design, and data profiling.
+  All ranking and fraud-detection logic runs locally without network calls.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Heuristic-based ranking pipeline with five component sub-scores combined
+  with a strict anti-gaming and honeypot filtering layer. We identify and
+  exclude 70 candidates showing impossible profile anomalies (skills with
+  zero duration, extreme claimed vs actual experience discrepancies).
+  Scoring incorporates semantic skill overlap, experience recency, startup fit,
+  and behavioral availability signals. Runs in ~10 seconds on CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

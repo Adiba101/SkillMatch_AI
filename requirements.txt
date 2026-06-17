@@ -1,0 +1,4 @@
+# AI Candidate Ranking System dependencies
+# This system is built using only Python's standard library to meet the 
+# strict CPU, memory, and runtime limits (under 5 minutes) of the challenge.
+# No external packages are required.
