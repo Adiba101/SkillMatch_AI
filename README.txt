@@ -1,4 +1,4 @@
-````md
+```md
 # 🚀 SkillMatch AI — Intelligent Candidate Ranking System
 
 <div align="center">
